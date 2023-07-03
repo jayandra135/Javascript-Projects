@@ -1,0 +1,76 @@
+body{
+  font-family: 'Kanit', sans-serif;
+
+
+}
+.section1{
+ text-align: center;
+ 
+}
+#box{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+#box1,#box2{
+ border : 2px solid black;
+ height: 250px;
+ width: 300px;
+ margin: 20px;
+ background-color: #292728;
+ box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+ border-radius: 30px;
+}
+#heading-box{
+ border-bottom: 2px solid black;
+ padding: 5px;
+ margin-top: 2px;
+ background-color: black;
+ color: white;
+ border-radius: 30px;
+}
+#playerimg{
+ background-image: url("images/player1.png");
+ background-size: contain;
+ background-repeat: no-repeat;
+ width: 200px;
+ height: 150px;
+ margin-left:25%;
+ 
+}
+
+#myselect{
+  margin:10px;
+}
+#computerimg{
+ background-image: url("images/computerimg.png");
+ background-size: contain;
+ background-repeat: no-repeat;
+ width: 200px;
+ height: 150px;
+ margin-left:25%;
+
+}      
+
+  .btn-grad {
+          background-image: linear-gradient(to right, #4776E6 0%, #8E54E9  51%, #4776E6  100%);
+
+          margin: 10px;
+          padding: 15px 45px;
+          text-align: center;
+          text-transform: uppercase;
+          transition: 0.5s;
+          background-size: 200% auto;
+          color: white;            
+          box-shadow: 0 0 20px #eee;
+          border-radius: 10px;   
+        border-color: none;       
+      }
+
+        .btn-grad:hover {
+          background-position: right center; /* change the direction of the change here */
+          color: #fff;
+          text-decoration: none;
+        }
+    

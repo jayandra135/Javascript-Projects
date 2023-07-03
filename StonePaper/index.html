@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockPaperScissor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit:wght@300&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body style="background-color: rgba(247, 184, 163, 1);">
+    <main>
+        <div>
+            <select id="myselect" class="btn btn-lg btn-primary">
+                <option value="Paper">Paper</option>
+                <option value="Scissor">Scissor</option>
+                <option value="Rock">Rock</option>
+            </select> 
+        </div>
+       
+        <section class="section1">
+            <h1 style="color: purple;">🥷Rock Paper Scissors🥷</h1>
+            <h2><span id="result">Result : </span></h2>
+            
+            <div id="box">
+              
+                <div id="box1">
+                    <h4 id="heading-box">Player</h4>
+
+                    <div id="playerimg" ></div>
+                    
+                    <!-- <h4 id="player1"></h4>  -->
+                </div>
+                <div id="box2">
+                    <h4 id="heading-box">Computer</h4>
+                    <div id="computerimg" ></div>
+                    <!-- <h4 id="computer1">Rock</h4> -->
+                </div>
+            </div>
+         
+                <button class="btn-grad" type="button" onclick="play()">Let's Play</button>
+               
+           
+        </section>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

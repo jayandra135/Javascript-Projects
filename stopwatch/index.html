@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <link href="style.css" rel="stylesheet">
+    <!-- <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            background-image: url(bg.gif);
+            /*  background-repeat: no-repeat; */
+            /*       background-size: cover; */
+
+
+        }
+
+        .watch-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5% auto;
+            background-color: rgb(26, 24, 24);
+            border-radius: 50%;
+            flex-wrap: wrap;
+            width: 250px;
+            height: 250px;
+            border: 2px solid white;
+            border-style: dotted;
+            /* 
+            box-shadow: rgba(18, 64, 213, 0.557) 5px 5px, rgba(69, 28, 219, 0.3) 10px 10px; */
+        }
+
+        .heading {
+            color: rgb(157, 224, 94);
+            text-align: center;
+            margin-top: 2%;
+        }
+
+        .watch-container>.time {
+            margin: 25% 1px;
+            width: 25%;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .time,
+        span {
+            color: green;
+            font-size: 30px;
+        }
+
+        .btns {
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        .material-symbols-outlined {
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 30px;
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1 class="heading">StopWatch in Javascript</h1>
+        <div class="watch-container">
+
+            <div class="time shake1"><span id="hr">00</span></div>
+            <span>:</span>
+            <div class="time shake1"><span id="min">00</span></div>
+            <span>.</span>
+            <div class="time shake1"><span id="sec">00</span></div>
+
+            <div class="btns">
+                <button onclick="start()" class="material-symbols-outlined" style="color:green;"
+                    id="start">start</button>
+                <!-- <button onclick="pause()" class="material-symbols-outlined" style="color:blue;"
+                    id="pause">pause_circle</button> -->
+                <button onclick="reset()" class="material-symbols-outlined" style="color: red;">restart_alt</button>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        var hour = 0;
+        var minute = 0;
+        var second = 0;
+        let timeout = 0;
+
+
+        var startbt = document.querySelector("#start");
+        var pausebt = document.querySelector("#pause");
+
+        function start() {
+            if (startbt.innerHTML === "start") {
+                timeout = setInterval(Timer, 100);
+                document.querySelector("#start").innerHTML = "pause_circle";
+
+
+            }
+            else if (startbt.innerHTML === "pause_circle") {
+                pause();
+            }
+
+
+
+
+        }
+
+        function Timer() {
+
+            second++;
+            //console.log(second);
+            if (second >= 60) {
+                second = 0;
+                minute++;
+                //console.log(minute);
+                if (minute >= 60) {
+                    minute = 0;
+                    hour++;
+                }
+
+            }
+            let hrsstring = hour;
+            let minstring = minute;
+            let secstring = second;
+
+            if (hour < 10) {
+                hrsstring = "0" + hrsstring;
+            }
+            if (minute < 10) {
+                minstring = "0" + minstring;
+            }
+            if (second < 10) {
+                secstring = "0" + secstring;
+            }
+
+            document.querySelector("#hr").innerHTML = hrsstring;
+            document.querySelector("#min").innerHTML = minstring;
+            document.querySelector("#sec").innerHTML = secstring;
+
+
+
+        }
+        function reset() {
+            clearInterval(timeout);
+            hour = 0;
+            minute = 0;
+            second = 0;
+            document.querySelector("#hr").innerHTML = "00";
+            document.querySelector("#min").innerHTML = "00";
+            document.querySelector("#sec").innerHTML = "00";
+
+
+        }
+
+        function pause() {
+
+            if (startbt.innerHTML == "pause_circle") {
+                clearInterval(timeout);
+                document.querySelector("#start").innerHTML = "start";
+
+            }
+
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

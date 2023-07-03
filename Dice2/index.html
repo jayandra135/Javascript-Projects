@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice-Game-2</title>
+    <link href="style.css" rel="styleSheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+</head>
+<body id="wongame">
+<main>
+    <div class="mainsection">
+        <h1>🎲Dice Game🎲</h1>
+        <h2 id="youwon"></h2>
+        <h2 >You have to make <span id="makechance" style="color: rgb(0, 255, 8);">&ndash;</span> in 10 chances to win</h2>
+        <h2>Remaining chances : <span id="remainchance" style="color: rgb(0, 255, 8);">&ndash;</span></h2>
+        <div class="dicediv">
+            <div class="dicecard">
+                <img src="./images/dice1.png" width="250px" height="250px" alt="dice" id="diceimg1">
+            </div>
+            <div class="dicecard">
+                <img src="./images/dice1.png" width="250px" height="250px" alt="dice" id="diceimg2">
+            </div>
+        </div>
+        <button type="button" onclick="winNumber()" id="winNumber">Click for Win Number</button>
+        <button type="button" onclick="roll()" id="roll">Roll</button>
+        <button type="button" onclick="reset()">Reset</button>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

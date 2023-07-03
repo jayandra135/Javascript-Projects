@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormControl</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #mainbox {
+            margin-top: 2%;
+        }
+
+        body {
+            background-color: rgb(217, 247, 247);
+        }
+
+        #result {
+            background-color: white;
+            color: black;
+            width: 800px;
+            padding: 20px 30px;
+            margin: 0 30%;
+            margin-top: -22px;
+            border-radius: 10px;
+            display: flex;
+            padding-bottom: 10px;
+            flex-wrap: wrap;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        #btn1 {
+            margin-left: 10px;
+            padding: 8px 15px;
+            border-radius: 50px;
+            background-color: lightgreen;
+            color: black;
+            border-color: lightgreen;
+            border: none;
+        }
+
+        .btn2 {
+            padding: 8px 15px;
+            border-radius: 50px;
+            margin-left: 10px;
+            background-color: lightgreen;
+            color: black;
+            border-color: lightgreen;
+        }
+
+        #inp1 {
+            height: 25px;
+            width: 200px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 2px solid black;
+            margin-left: 20px;
+        }
+
+        .box1 {
+            width: 50%;
+            font-size: 25px;
+            margin-top: 30px;
+        }
+
+        .box2 {
+            width: 50%;
+            margin-top: 30px;
+            position: relative;
+
+        }
+
+        .newlabel {
+            order: -1;
+            font-size: 25px;
+        }
+
+        .newlabel3 {
+            font-size: 25px;
+        }
+
+        .closebtn {
+            padding: 8px 15px;
+            border-radius: 50px;
+            margin-left: 10px;
+            float: right;
+            background-color: lightgreen;
+            color: black;
+        }
+
+        .newselect {
+            height: 25px;
+            width: 200px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+
+        .jay {
+            height: 25px;
+            width: 200px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+
+        .newbox {
+            display: flex;
+            flex-direction: row;
+            /* position: absolute;
+    top: -30px;
+    right: 270px; */
+            margin-top: 0px;
+            font-size: 20px;
+
+        }
+
+        .subdiv {
+            margin-top: 20px;
+            margin-left: 45%;
+        }
+
+        #printData {
+            display: flex;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            background-color: white;
+            color: black;
+            width: 500px;
+            margin-top: 2%;
+        }
+
+        #showDataa {
+            display: flex;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            background-color: white;
+            color: black;
+            width: 500px;
+            margin-top: 2%;
+        }
+
+        .newbox1,
+        .newbox2 {
+            width: 40%;
+            margin: 10px 5%;
+            padding: 10px 0px;
+        }
+
+        .newbox1 {
+
+            display: flex;
+
+            flex-wrap: wrap;
+        }
+
+        .newbox2 {
+
+            padding: 10px;
+        }
+
+        #resshow {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #displayData {
+            background-color: lightblue;
+            color: black;
+            padding: 8px 15px;
+            border-radius: 50px;
+            border-color: lightblue;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainbox">
+        <select name="" id="selectItems" onselect="getValue()">
+            <option value="selcet">Select</option>
+            <option value="Text">text</option>
+            <option value="Number">Number</option>
+            <option value="Email">Email</option>
+            <option value="Radio">Radio</option>
+            <option value="Select">Select</option>
+            <option value="Checkbox">Checkbox</option>
+            <option value="submit">Submit</option>
+        </select>
+        <button id="btn1">ADD</button>
+        <div id="result">
+
+        </div>
+    </div>
+    <div id="resshow">
+        <div id="printData">
+        </div>
+        <div id="showDataa">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="jay.js"></script>
+</body>
+
+</html>

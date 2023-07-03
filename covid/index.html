@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Tracker</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit:wght@300&family=Kaushan+Script&family=Schibsted+Grotesk&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navBrand">
+                <div class="imgDiv">
+                    <img src="./images/flaggif.gif" class="imgBrand">
+                </div>
+                <div class="titleDiv">
+                    <h1 style="text-align: center;">INDIA</h1>
+                    <h4>Covid-19 Tracker</h4>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section1">
+            <div>
+                <a href="index.html"><i><img src="./images/home-button.png" id="homeBtn"></i></a>
+            </div>
+            <div id="inputBox">
+                <input type="text" id="searchState" placeholder="search by state">
+                <button onclick="searchBystate()" id="searchBtn">Search</button>
+            </div>
+        </section>
+        <section class="section2" id="summary">
+
+        </section>
+        <section class="section3" id="dataDisplay">
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
